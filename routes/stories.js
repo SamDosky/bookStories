@@ -47,7 +47,7 @@ router.get('/show/:id', (req, res) => {
 
 // List stories from a user
 router.get('/user/:userId', (req, res) => {
-  Story.find({user: req.params.userId, status: 'public'})
+Story.find({user: req.params.userId, status: 'public'})
     .populate('user')
     .then(stories => {
       res.render('stories/index', {
@@ -58,7 +58,7 @@ router.get('/user/:userId', (req, res) => {
 
 // Logged in users stories
 router.get('/my', ensureAuthenticated, (req, res) => {
-  Story.find({user: req.user.id})
+Story.find({user: req.user.id})
     .populate('user')
     .then(stories => {
       res.render('stories/index', {

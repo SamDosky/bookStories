@@ -68,6 +68,7 @@ app.use(session({
   secret: 'secret',
   resave: false,
   saveUninitialized: false
+  
 }));
 
 // Passport Middleware
