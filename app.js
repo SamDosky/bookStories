@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
-const key = require('./config/key_dev')
 
 // Load Models
 require('./models/User');
@@ -36,7 +35,7 @@ const {
 // Map global promises
 mongoose.Promise = global.Promise;
 // Mongoose Connect
-mongoose.connect(keys.mongoURI, {
+mongoose.connect('mongodb://bookstore:1qaz1qaz@ds257981.mlab.com:57981/bookstore', {
   useMongoClient:true
 })
   .then(() => console.log('MongoDB Connected'))
