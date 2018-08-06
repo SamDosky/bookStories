@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
+const key = require('./config/key_dev')
 
 // Load Models
 require('./models/User');
@@ -21,7 +22,7 @@ const auth = require('./routes/auth');
 const stories = require('./routes/stories');
 
 // Load Keys
-const keys = require('./config/keys');
+const keys = require('./config/keys_dev');
 
 // Handlebars Helpers
 const {
@@ -68,7 +69,7 @@ app.use(session({
   secret: 'secret',
   resave: false,
   saveUninitialized: false
-  
+
 }));
 
 // Passport Middleware
