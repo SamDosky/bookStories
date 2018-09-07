@@ -1,5 +1,11 @@
 # bookStories
-app to right stories , articles , or your memories.
+social network for people who like to read articles, stories.
+
+you can write your story on private or public status . you can save it as unpuplished and return back to change it.
+
+very easy login by using your gmail account. 
+
+you can add comments for other people stories or articals in case they were puplic . 
 
 
 https://stormy-dusk-83351.herokuapp.com
